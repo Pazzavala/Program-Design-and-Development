@@ -13,58 +13,75 @@ int main()
     q.enqueue(2);
     q.enqueue(3);
 
-    cout << "The front element is " << q.peek() << endl;
+    // cout << "The front element is " << q.peek() << endl;
 
     cout << "need to dequeue " << q.indexOf(1) << " elements before 1 is at the front" << endl;
     cout << "need to dequeue " << q.indexOf(2) << " elements before 2 is at the front" << endl;
     cout << "need to dequeue " << q.indexOf(3) << " elements before 3 is at the front" << endl;
-    cout << "need to dequeue " << q.indexOf(4) << " elements before 4 is at the front" << endl;
+    // cout << "need to dequeue " << q.indexOf(4) << " elements before 4 is at the front" << endl;
 
-    q.dequeue();
+    Queue q2 = q;
+    Queue q3(5);
+    q3.enqueue('8');
+    q3.enqueue('8');
+    q3.enqueue('8');
+    q3.enqueue('8');
 
-    q.enqueue(4);
+    q3 = q2;
+    q3.dequeue();
+    q3.dequeue();
+    q3.dequeue();
+    // q3.dequeue();
 
-    cout << "The queue size is " << q.size() << endl;
+    cout << "need to dequeue " << q3.indexOf('8') << endl;
+    cout << "The queue size is " << q2.size() << endl;
 
-    q.dequeue();
-    q.dequeue();
-    q.dequeue();
+    // q.dequeue();
+    // q.dequeue();
+    // q.dequeue();
 
-    if (q.isEmpty()) {
-      cout << "The queue is empty\n" << q.size(); //exits with underflow
-    }
-    else if (q.isFull()) {
-      cout << "The queue is full\n";
-    }
-    else {
-      cout << "The queue is not empty\n";
-    }
+    // if (q.isEmpty()) {
+    //   cout << "The queue is empty\n" << q.size(); //exits with underflow
+    // }
+    // else if (q.isFull()) {
+    //   cout << "The queue is full\n";
+    // }
+    // else {
+    //   cout << "The queue is not empty\n";
+    // }
 
-    q.enqueue(24);
-    q.enqueue(42);
-    q.enqueue(38);
-    q.enqueue(15);
-    cout << "need to dequeue " << q.indexOf(15) << " elements before 15 is at the front" << endl;
-    cout << "need to dequeue " << q.indexOf(38) << " elements before 38 is at the front" << endl;
-    cout << "Running bubble sort algorithm: \n";
-    q.bubbleSort();
-    cout << "\n";
-    q.clear();
+    // q.enqueue(24);
+    // q.enqueue(42);
+    // q.enqueue(38);
+    // q.enqueue(15);
+    // cout << "need to dequeue " << q.indexOf(15) << " elements before 15 is at the front" << endl;
+    // cout << "need to dequeue " << q.indexOf(38) << " elements before 38 is at the front" << endl;
+    // cout << "Running bubble sort algorithm: \n";
+    // q.bubbleSort();
+    // cout << "\n";
+    // q.clear();
 
     
-    // cout << "Peek of empty: " << q.peek() << endl; // Cant do this its underflow
+    // // cout << "Peek of empty: " << q.peek() << endl; // Cant do this its underflow
 
-    q.enqueue(24);
-    q.enqueue(42);
-    q.enqueue(38);
-    q.enqueue(15);
+    // q.enqueue(24);
+    // q.enqueue(42);
+    // q.enqueue(38);
+    // q.enqueue(15);
 
-    cout << "Index of non Exitent: " << q.indexOf(-1) << endl;
+    // cout << "Index of non Exitent: " << q.indexOf(-1) << endl;
 
-    cout << "Running merge sort algorithm: \n";
-    q.mergeSort();
-    cout << "\n";
+    // cout << "Running merge sort algorithm: \n";
+    // q.mergeSort();
+    // cout << "\n";
     q.clear();
+
+    Queue* q4 = new Queue(5);
+    q3.enqueue('8');
+    q3.enqueue('8');
+    q3.enqueue('8');
+    q3.enqueue('8');
+    delete q4;
 
     return 0;
 }
