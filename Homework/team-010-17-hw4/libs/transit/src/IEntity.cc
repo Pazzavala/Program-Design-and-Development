@@ -78,9 +78,13 @@ void IEntity::subscribe(std::string observerType, IObserver* observer) {
   observers[observerType].push_back(observer);
 }
 
-void IEntity::unsubscribe(std::string observerType, IObserver* observer) {
-  auto& subs = observers[observerType];
-  subs.erase(std::remove(subs.begin(), subs.end(), observer), subs.end());
+void IEntity::unsubscribe() {
+  for (auto& subs : observers) {
+      for (auto& observer : subs.second) {
+          delete observer;
+      }
+      subs.second.clear();
+  }
 }
 
 void IEntity::notify(std::string observerType, const IEntity& self) {

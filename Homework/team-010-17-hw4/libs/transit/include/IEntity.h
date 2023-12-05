@@ -127,7 +127,7 @@ class IEntity {
    * @brief Unsubscribes the observer from the entity
    * @param observer The obesrver that is unsubscribing
   */
-  virtual void unsubscribe(std::string observerType, IObserver* observer);
+  virtual void unsubscribe();
 
   /**
    * @brief Sends update about motion to subscribers

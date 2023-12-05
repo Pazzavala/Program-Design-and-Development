@@ -40,7 +40,6 @@ IEntity* SimulationModel::createEntity(JsonObject& entity) {
     entities[myNewEntity->getId()] = myNewEntity;
   }
 
-  // ************************************************************************
   // Create a Observers for drone.
     ScheduledObserver* scheduledObs = new ScheduledObserver(controller);
     MovingObserver* movingObs = new MovingObserver(controller);
@@ -133,6 +132,7 @@ void SimulationModel::removeFromSim(int id) {
         break;
       }
     }
+    entity->unsubscribe();
     controller.removeEntity(*entity);
     entities.erase(id);
     delete entity;
