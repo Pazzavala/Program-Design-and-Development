@@ -4,7 +4,7 @@
 #include "IObserver.h"
 
 class PickedUpObserver : public IObserver {
-public:
+ public:
     /**
      * @brief Constructor for PickedUpObserver.
      * @param controller Reference to the controller associated with the observer.
@@ -23,4 +23,4 @@ public:
     void update(const IEntity& entity) override;
 };
 
-#endif // PICKEDUPOBSERVER_H_
+#endif   // PICKEDUPOBSERVER_H_

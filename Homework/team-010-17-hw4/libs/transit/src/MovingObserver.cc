@@ -6,7 +6,6 @@ MovingObserver::MovingObserver(IController& controller)
 
 MovingObserver::~MovingObserver() {}
 
-// Maybe Id have to pass entity: Drone as well as entity:Package
 void MovingObserver::update(const IEntity& entity) {
     JsonObject details;
     details["value"] = "moving";

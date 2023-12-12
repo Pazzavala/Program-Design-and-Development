@@ -88,7 +88,7 @@ void IEntity::unsubscribe() {
 }
 
 void IEntity::notify(std::string observerType, const IEntity& self) {
-  for(auto& observer : observers[observerType]) {
+  for (auto& observer : observers[observerType]) {
     observer->update(self);
   }
 }

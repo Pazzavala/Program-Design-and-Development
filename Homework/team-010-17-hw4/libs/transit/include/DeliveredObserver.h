@@ -4,7 +4,7 @@
 #include "IObserver.h"
 
 class DeliveredObserver : public IObserver {
-public:
+ public:
     /**
      * @brief Constructor for DeliveredObserver.
      * @param controller Reference to the controller associated with the observer.
@@ -23,4 +23,4 @@ public:
     void update(const IEntity& entity) override;
 };
 
-#endif // DELIVEREDOBSERVER_H_
+#endif  // DELIVEREDOBSERVER_H_

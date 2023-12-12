@@ -11,5 +11,5 @@ void PickedUpObserver::update(const IEntity& entity) {
     details["droneId"] = std::to_string(entity.getSpecificId());
     // for robot and package
     details["itemId"] = std::to_string(entity.getPackageNumber());
-    controller.sendEventToView("Notification", details); 
+    controller.sendEventToView("Notification", details);
 }
